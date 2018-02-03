@@ -14,4 +14,5 @@ class Dummy {
 
         $this->main = $main;
         $this->server = $main->getServer();
-}
+     }
+  }
