@@ -6,7 +6,7 @@ use pocketmine\Server;
 use pocketmine\Player;
 use BajanVlogs\FacTitle\Main;
 
-class Dummy {
+class Dummy1 {
 
 
    public function __construct(Main $main) {
