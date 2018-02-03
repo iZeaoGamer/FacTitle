@@ -45,7 +45,7 @@ class Task1 extends PluginTask {
 
 
 
-   public function onRun($tick) {
+   public function onRun(int $tick) {
 
 
         $this->main->getLogger()->debug('Task ' . get_class($this) . ' is running on $tick'); 
