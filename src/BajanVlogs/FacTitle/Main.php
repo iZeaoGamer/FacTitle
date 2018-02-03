@@ -25,11 +25,10 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getLogger()->info("Faction Titles Enabled!");		
     }
 	
-	//public function onJoin(PlayerJoinEvent $ev) {
-    //    $p = $ev->getPlayer();
-	//	 $this->infac[] = $p->getName();
-	//}
-	// hack removed ^^
+	public function onJoin(PlayerJoinEvent $ev) {
+          $p = $ev->getPlayer();
+		 $this->infac[] = $p->getName();
+	}
    public function onMove(PlayerMoveEvent $ev){
       $p = $ev->getPlayer();
 	  $name = $p->getName();
@@ -41,10 +40,10 @@ class Main extends PluginBase implements Listener {
 							 $x = floor($p->getX());
 							 $y = floor($p->getY());
 							 $z = floor($p->getZ());
-							 $fac = $this->FactionsPro->factionFromPoint($x,$z);
+							 $fac = $this->FactionsPro->factionFromPoint($x,$z,$level);
 							 $this->infac[] = $p->getName();
-							 $title = "§9Now Entering ";
-							 $subtitle = "§6" . $fac . " ";
+							 $title = "§a§lNow Entering ";
+							 $subtitle = "§b§l" . $fac . " ";
 							 $p->addTitle($title, $subtitle);
 						}
 					}
