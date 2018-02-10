@@ -41,7 +41,7 @@ class Main extends PluginBase implements Listener {
 							 $x = floor($p->getX());
 							 $y = floor($p->getY());
 							 $z = floor($p->getZ());
-							 $fac = $this->FactionsPro->factionFromPoint($x, $z, $level);
+							 $fac = $this->FactionsPro->factionFromPoint($x, $z, $sender->getPlayer()->getLevel());
 							 $this->infac[] = $p->getName();
 							 $title = "§a§lNow Entering ";
 							 $subtitle = "§b§l" . $fac . " ";
