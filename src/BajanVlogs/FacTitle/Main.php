@@ -12,8 +12,6 @@ use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\level\Level;
-use pocketmine\level\Position;
 
 class Main extends PluginBase implements Listener {
 
@@ -41,7 +39,7 @@ class Main extends PluginBase implements Listener {
 							 $x = floor($p->getX());
 							 $y = floor($p->getY());
 							 $z = floor($p->getZ());
-							 $fac = $this->FactionsPro->factionFromPoint($x, $z, $sender->getPlayer()->getLevel()->getName());
+							 $fac = $this->FactionsPro->factionFromPoint($x, $z);
 							 $this->infac[] = $p->getName();
 							 $title = "§a§lNow Entering ";
 							 $subtitle = "§b§l" . $fac . " ";
