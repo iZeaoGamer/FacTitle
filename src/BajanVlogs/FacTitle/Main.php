@@ -31,6 +31,8 @@ class Main extends PluginBase implements Listener {
    public function onMove(PlayerMoveEvent $ev){
       $p = $ev->getPlayer();
 	  $name = $p->getName();
+	   $level = $sender->getPlayer()->getLevel();
+	   
 						if(!$this->FactionsPro->isInPlot($p)){
 							$id = array_search($p->getName(), $this->infac);
 							unset($this->infac[$id]);
@@ -39,7 +41,7 @@ class Main extends PluginBase implements Listener {
 							 $x = floor($p->getX());
 							 $y = floor($p->getY());
 							 $z = floor($p->getZ());
-							 $fac = $this->FactionsPro->factionFromPoint($x, $z, string $level);
+							 $fac = $this->FactionsPro->factionFromPoint($x, $z, $level);
 							 $this->infac[] = $p->getName();
 							 $title = "§a§lNow Entering ";
 							 $subtitle = "§b§l" . $fac . " ";
